@@ -15,25 +15,17 @@ export const SignupLogin = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(name.current.value);
-        console.log(email.current.value);
-        console.log(password.current.value);
-        console.log(username.current.value);
 
-        axios.post("https://samarthbackend.herokuapp.com/signup", {
+        axios.post("https://samarthbackend-s5dvq.ondigitalocean.app/signup", {
             name: name.current.value,
             email: email.current.value,
             username: username.current.value,
             password: password.current.value
         }).then((response) => {
-            console.log(response);
-            console.log(response.status);
             if (response.status === 201) {
                 swal("SUCCESS!", "User has been created successfully!", "success");
             }
         }).catch((err) => {
-            console.log(err);
-            console.log(err.response.status);
             if (err.response.status === 400) {
                 swal("ERROR!", "Username/Email is already used!", "error");
             }
@@ -47,7 +39,7 @@ export const SignupLogin = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 justify-content-center bg-slate-100'>
                 <div className='lg:order-last image'>
-                    <img src={firstpic} alt='pic' className='lg:w-10/12 lg:h-5/6 mt-7 ml-10' />
+                    <img src={firstpic} alt='pic' className='w-80 h-80 lg:w-10/12 lg:h-5/6 mt-7 ml-10' />
                 </div>
                 <div className="w-11/12 h-11/12 shadow-default lg:mt-10 lg:ml-10 py-10 px-1">
                     <blockquote className="text-3xl">

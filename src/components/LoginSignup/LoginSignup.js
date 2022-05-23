@@ -18,23 +18,16 @@ export const LoginSignup = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(password.current.value);
-        console.log(username.current.value);
 
-        axios.post("https://samarthbackend.herokuapp.com/login", {
+        axios.post("https://samarthbackend-s5dvq.ondigitalocean.app/login", {
             username: username.current.value,
             password: password.current.value
         }).then((response) => {
-            console.log(response);
-            console.log(response.data.token);
             sessionStorage.setItem("token", response.data.token);
-            console.log(response.status);
             if (response.status === 200) {
                 navigation();
             }
         }).catch((err) => {
-            console.log(err);
-            console.log(err.response.status);
             if (err.response.status === 400) {
                 swal("ERROR!", "Use valid Username/Password!", "error");
             }
@@ -48,7 +41,7 @@ export const LoginSignup = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 justify-content-center bg-slate-100 pb-14'>
                 <div className='lg:order-last image'>
-                    <img src={firstpic} alt='pic' className='lg:w-10/12 lg:h-5/6 mt-20 ml-9' />
+                    <img src={firstpic} alt='pic' className='w-80 h-80 lg:w-10/12 lg:h-5/6 mt-20 ml-9' />
                 </div>
                 <div className="w-11/12 h-11/12 shadow-default lg:mt-5 lg:ml-10 py-10 px-1">
                     <blockquote className="text-2xl font-medium ml-5">

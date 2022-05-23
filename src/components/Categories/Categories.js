@@ -33,7 +33,7 @@ export const Categories = () => {
             <div>
                 <h2 className='text-6xl font-semibold text-center text-black mt-20 mb-10'>Categories</h2>
             </div>
-            <div className='grid grid-cols-3 gap-4 ml-14'>
+            <div className='grid lg:grid-cols-3 gap-4 lg:ml-6'>
                 <Link to='/Jobs' state={{ disabilityType: "visually impaired" }}>
                     <div class="max-w-sm rounded-2xl overflow-hidden border-indigo-700 border-2 mt-8">
                         <div class="px-6 py-4">

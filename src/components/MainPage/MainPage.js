@@ -3,6 +3,7 @@ import Left from "../../assets/Left.svg";
 import Middle from "../../assets/Middle.svg";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './MainPage.css';
 
 export const MainPage = () => {
 
@@ -60,13 +61,13 @@ export const MainPage = () => {
     return (
         <div className='bg-indigo-50 pt-5'>
             <div className='mt-16'>
-                <h1 className='text-7xl font-bold tracking-normal text-center text-black'>Get the <span className='text-7xl font-bold tracking-normal text-center text-indigo-600'>Chance</span></h1>
-                <h2 className='text-7xl font-bold tracking-normal text-center text-black mt-4'>You Deserve</h2>
-                <h2 className='text-3xl font-semibold tracking-normal text-center text-black tracking-wide mt-12'>5033 Jobs & 786 candidates are registered</h2>
+                <h1 className='text-4xl lg:text-7xl font-bold tracking-normal text-center text-black'>Get the <span className='text-4xl lg:text-7xl font-bold tracking-normal text-center text-indigo-600'>Chance</span></h1>
+                <h2 className='text-4xl lg:text-7xl font-bold tracking-normal text-center text-black mt-4'>You Deserve</h2>
+                <h2 className='text-xl lg:text-3xl font-semibold tracking-normal text-center text-black tracking-wide mt-12'>5033 Jobs & 786 candidates are registered</h2>
             </div>
             <div className='grid grid-cols-6 mt-10' style={{ height: "225px" }}>
                 <div style={{ transform: "translate(10px, -100px)" }}>
-                    <img src={Middle} alt='img' className='h-11/12' />
+                    <img src={Middle} alt='img' className='image1 lg:h-11/12' />
                 </div>
                 <div class="col-start-2 col-span-4" >
                     <form onSubmit={handleSubmit}>
@@ -99,8 +100,8 @@ export const MainPage = () => {
                         </div>
                     </form>
                 </div>
-                <div style={{ transform: "translate(10px, -100px)" }}>
-                    <img src={Left} alt='img' className='h-11/12' />
+                <div style={{ transform: "translate(10px, -150px)" }}>
+                    <img src={Left} alt='img' className='image2 h-11/12' />
                 </div>
             </div>
         </div>

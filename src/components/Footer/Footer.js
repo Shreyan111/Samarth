@@ -5,7 +5,7 @@ import Logo from "../../assets/MainLogo.svg";
 export const Footer = () => {
     return (
         <footer>
-            <div className=" container flex flex-col flex-wrap px-4 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
+            <div className=" container flex flex-col flex-wrap lg:px-4 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
                 <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left mt-12">
                     <div className='flex'>
                         <img src={Logo} alt='img' className='w-60' />
@@ -74,8 +74,8 @@ export const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="justify-between w-full text-center lg:flex ml-44 mt-10">
-                    <div className="w-full px-4 lg:w-1/3 md:w-1/2">
+                <div className="justify-between w-full text-center lg:flex lg:ml-44 mt-10">
+                    <div className="w-full px-4 justify-center lg:w-1/3 md:w-1/2">
                         <h2 className="mb-2 font-bold tracking-widest text-gray-900 text-left text-lg">
                             Get in touch
                         </h2>

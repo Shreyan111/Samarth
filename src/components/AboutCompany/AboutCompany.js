@@ -5,6 +5,7 @@ import Profile_Email from "../../assets/Profile_Email.svg";
 import Profile_LinkedIn from "../../assets/Profile_LinkedIn.svg";
 import { Link, useLocation } from 'react-router-dom';
 
+
 export const AboutCompany = () => {
     let location = useLocation();
     // console.log(location.state);

@@ -16,7 +16,7 @@ export const SignupLogin = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post("https://samarthbackend-s5dvq.ondigitalocean.app/signup", {
+        axios.post("https://samarthbackend.herokuapp.com/signup", {
             name: name.current.value,
             email: email.current.value,
             username: username.current.value,
